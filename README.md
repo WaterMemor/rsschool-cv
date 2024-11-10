@@ -1,1 +1,1 @@
-# rsschool-cv
+https://watermemor.github.io/rsschool-cv/cv
