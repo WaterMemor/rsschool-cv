@@ -125,3 +125,12 @@ a:not(.img_a):hover{
     line-height: 30px;
     margin-bottom: 50px;
 }
+footer img{
+    width: 100px;
+    height: auto;
+}
+footer > div{
+    display: flex;
+        gap: 20px;
+        justify-content: space-between;
+}
