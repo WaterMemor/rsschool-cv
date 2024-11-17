@@ -28,7 +28,6 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="info">
-                        <h2></h2>
                         <div class="education"><span>Education:</span> Bachelor's degree in Applied Computer Science at Vladimir State University, Russia 2019 - 2023</div>
                         <div><span>English:</span> B2 level</div>
                         <div class="contacts">
@@ -174,8 +173,8 @@
                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample">Open code</a>
                     <div class="collapse" id="collapseExample">
                         <span class="code-title">Bot initialization</span>
+                        <pre>
                         <code>
-                            <pre>
                                 function sendMessage($chatId, $message) {
                                     global $apiUrl;
                                     $url = $apiUrl . "sendMessage?chat_id=" . $chatId . "&text=" . urlencode($message);
@@ -203,11 +202,12 @@
                                         curl_close($ch);
                                     }
                                 }
-                            </pre>
+                            
                         </code>
+                        </pre>
                         <span class="code-title">About to recived parameters we will send to user different message:</span>
+                        <pre>
                         <code>
-                            <pre>
                                 function sendMessage($chatId, $message) {
                                     global $apiUrl;
                                     $url = $apiUrl . "sendMessage?chat_id=" . $chatId . "&text=" . urlencode($message);
@@ -226,11 +226,11 @@
                                     $message = "Вы получили важное сообщение. Пожалуйста, проверьте свои уведомления на сайте.";
                                 }
                                 sendMessage($_GET['chatid'],$message);
+                            </code>
                             </pre>
-                        </code>
                         <span class="code-title">1CBitrix /php_interface/init.php code. Event on sending message to chat</span>
+                        <pre>
                         <code>
-                            <pre>
                                 AddEventHandler("im", "OnBeforeMessageNotifyAdd", "___OnBeforeMessageNotifyAdd");
                                 function ___OnBeforeMessageNotifyAdd($arFields)
                                 {
@@ -261,8 +261,8 @@
                                         }
                                     }
                                 }
-                            </pre>
                         </code>
+                    </pre>
                     </div>
                 </div>
                 <div class="description_question">For 1CBitrix web-sites I also write my own fields' types, classes, components.</div>
@@ -291,8 +291,8 @@
                     <div class="collapse" id="collapseExample1">
                         <span class="code-title">In php_interface/include/classes we create file of new class detailtextdesign.php. Here is some important functions.</span>
                         <span class="code-title">function contvertToDB. All our recived values we will keep in Bitrix HighloadBlock</span>
+                        <pre>
                         <code>
-                            <pre>
                             public static function ConvertToDB($arProperty, $value)
                             {
                                 $arSettings = static::PrepareSettings($arProperty);
@@ -362,8 +362,8 @@
                                     return $value;
                                 }
                             }
-                            </pre>
                         </code>
+                    </pre>
                     </div>
                 </div>
             </div>
